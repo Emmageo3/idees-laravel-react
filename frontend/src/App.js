@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header.js';
+import FormSection from './components/FormSection.js';
+import Filtre from './components/Filtre.js';
+import Graph from './components/Graph.js';
+import { useRecoilState } from 'recoil';
+import {suggestions} from "./atoms/suggestions";
 
 function App() {
+  const [data, setData] = useRecoilState(suggestions);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header/>
+      <FormSection/>
+      <Graph/>
+      <Filtre/>
     </div>
   );
 }
