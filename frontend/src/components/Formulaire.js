@@ -18,7 +18,7 @@ const Formulaire = (props) => {
 
     const handleSbmit = (e) => {
         e.preventDefault();
-        axios.post("https://api-boite-idee.herokuapp.com/api/idee/",
+        axios.post("http://127.0.0.1:8000/api/idees/",
             {titre:titre, description:contenuSaisi, statut:true},
             {
                 headers: { 

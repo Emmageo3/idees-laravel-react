@@ -8,14 +8,14 @@ const Carte = ({idee}) => {
 
     const handleValidClick = () => {
         axios.patch(
-            `https://api-boite-idee.herokuapp.com/api/idee/${idee.id}`,
+            `http://127.0.0.1:8000/api/idees/${idee.id}`,
             {statut: true}
         )
         .then( () => setStatut(true))
     }
     const handleUndoClick = () => {
         axios.patch(
-            `https://api-boite-idee.herokuapp.com/api/idee/${idee.id}`,
+            `http://127.0.0.1:8000/api/idees/${idee.id}`,
             {statut: false}
         )
         .then( () => setStatut(false))
