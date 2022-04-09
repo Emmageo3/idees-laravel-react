@@ -10,7 +10,7 @@ const ListeCarte = () => {
     let [accepte, refuse] = [0,0];
     
     useEffect( ()=> {
-        axios.get("http://127.0.0.1:8000/api/idees")
+        axios.get("https://api-boite-idee.herokuapp.com/api/idee")
         .then( response => setData(response.data));
     }, []);
 
